@@ -19,5 +19,15 @@ class UserInput {
         return scanner.nextInt();
     }
 
-   
+    // Method to get input for an array of integers from the user
+    int[] getIntegerArray() {
+        System.out.println("Enter the number of elements in the array: ");
+        int arraySize = scanner.nextInt();
+        int[] array = new int[arraySize];
+        System.out.println("Enter " + arraySize + " integers:");
+        for (int i = 0; i < arraySize; i++) {
+            array[i] = scanner.nextInt();
+        }
+        return array;
+    }
 }
