@@ -44,5 +44,26 @@ class Calculator {
         System.out.println();
     }
 
-   
+     // Method to calculate the mean of an integer array
+    void calculateMean(int[] array) {
+        double sum = 0;
+        for (int value : array) {
+            sum += value;
+        }
+        System.out.println("Mean: " + (sum / array.length));
+    }
+
+    // Method to calculate the variance of an integer array
+    void calculateVariance(int[] array) {
+        double sum = 0;
+        for (int value : array) {
+            sum += value;
+        }
+        double mean = sum / array.length;
+        double sumSquaredDifferences = 0;
+        for (int value : array) {
+            sumSquaredDifferences += Math.pow(value - mean, 2);
+        }
+        System.out.println("Variance: " + (sumSquaredDifferences / array.length));
+    }
 }
