@@ -16,6 +16,34 @@ class Main {
             
             choice = userInput.getSingleInteger(); // user's choice
             
-            
+            switch (choice) {
+                case 1:
+                    System.out.println("Sum: " + calculator.add());
+                    break;
+                case 2:
+                    System.out.println("Difference: " + calculator.subtract());
+                    break;
+                case 3:
+                    System.out.println("Product: " + calculator.multiply());
+                    break;
+                case 4:
+                    System.out.println("Quotient: " + calculator.divide());
+                    break;
+                case 5:
+                    calculator.generateFibonacci(userInput.getSingleInteger());
+                    break;
+                case 6:
+                    calculator.calculateMean(userInput.getIntegerArray());
+                    break;
+                case 7:
+                    calculator.calculateVariance(userInput.getIntegerArray());
+                    break;
+                case 8:
+                    System.out.println("Exiting...");
+                    break;
+                default:
+                    System.out.println("Invalid choice. Try again.");
+            }
+        } while (choice != 8);
     }
 }
